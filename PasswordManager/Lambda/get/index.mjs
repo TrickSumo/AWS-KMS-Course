@@ -8,7 +8,7 @@ const config = {
 
 const client = new DynamoDBClient({});
 const docClient = DynamoDBDocumentClient.from(client);
-const kmcClient = new KMSClient(config);
+const kmsClient = new KMSClient(config);
 
 const tableName = process.env.tableName || "PassManager";
 const keyId = process.env.keyId || "alias/PassManagerKey";
@@ -54,7 +54,7 @@ export const getPass = async (event) => {
                     "purpose": "password-encryption",
                 },
             });
-            const kmsResponse = await kmcClient.send(decryptCommand);
+            const kmsResponse = await kmsClient.send(decryptCommand);
 
             response.Item.password = Buffer.from(kmsResponse.Plaintext).toString("utf-8");
 
