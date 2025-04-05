@@ -1,0 +1,83 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.add-pass-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.styled-input {
+  padding: 8px;
+  border: 2px solid #8B4513;
+  border-radius: 4px;
+  background-color: #F5DEB3;
+  color: #6B3A1D;
+  font-size: 16px;
+  width: 90%;
+  max-width: 400px;
+}
+
+.styled-label{
+  font-size: 18px;
+  color: #8B4513;
+}
+
+button {
+  background-color: #8B4513;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+  width: 120px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #6B3A1D;
+}
+
+.pass-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.pass-card {
+  background-color: #D2B48C;
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+  width: 220px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.pass-card:hover {
+  background-color: #c0a16b;
+}
+
+.details-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  background-color: #fff8e1;
+  border-radius: 10px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
