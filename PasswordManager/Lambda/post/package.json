@@ -1,0 +1,17 @@
+{
+  "name": "passmaanger",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.782.0",
+    "@aws-sdk/client-kms": "^3.782.0",
+    "@aws-sdk/lib-dynamodb": "^3.782.0"
+  }
+}
