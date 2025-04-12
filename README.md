@@ -79,13 +79,14 @@ STRING_TO_SIGN="<JWT_HEADER>.<JWT_PAYLOAD_WITHOUT=>"
 * Step 3: Hash the Data
 ```
 HASHED_STRING=$(echo -n "$STRING_TO_SIGN" | openssl dgst -sha256 -binary | base64)
+echo $HASHED_STRING
 ```
 
 * Step 4: Sign with AWS KMS
 
 ```
 SIGNATURE=$(aws kms sign \
-  --key-id alias/AuthServerKey \
+  --key-id alias/jwtKey \
   --message "$HASHED_STRING" \
   --message-type DIGEST \
   --signing-algorithm RSASSA_PKCS1_V1_5_SHA_256 \
