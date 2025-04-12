@@ -100,3 +100,17 @@ SIGNATURE=$(aws kms sign \
 JWT_FINAL="${STRING_TO_SIGN}.${SIGNATURE}"
 echo "Final JWT: $JWT_FINAL"
 ```
+
+---
+
+# Serverless App Architecture
+
+![image](https://github.com/user-attachments/assets/c7419f34-0f40-4579-95b1-2f2bae1c8c85)
+![image](https://github.com/user-attachments/assets/4d43b563-8ba9-431f-8298-db416ce8baf7)
+
+```
+![image](https://github.com/user-attachments/assets/caa4134e-f1c6-4b3e-9bcd-c512260764c2)
+![image](https://github.com/user-attachments/assets/58c3c221-ee28-4d64-b6a2-6add660d08d3)
+
+
+
