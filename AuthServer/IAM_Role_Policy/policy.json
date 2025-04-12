@@ -1,0 +1,33 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "Cloudwatch Permissions",
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "DynamoDB Permissions",
+            "Effect": "Allow",
+            "Action": [
+                "dynamodb:PutItem",
+                "dynamodb:GetItem"
+            ],
+            "Resource": "arn:aws:dynamodb:us-east-1:<account-id>:table/PassManager"
+        },
+        {
+            "Sid": "KMS Permissions",
+            "Effect": "Allow",
+            "Action": [
+                "kms:Sign",
+                "kms:Verify"
+            ],
+            "Resource": "arn:aws:kms:us-east-1:<account-id>:key/<key-id>"
+        }
+    ]
+}
